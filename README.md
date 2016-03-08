@@ -1,6 +1,14 @@
 # docker-alias-functions
 Docker aliases and functions.
 
+#### Installation
+
+##### Install for Zsh
+    $ curl -fsSL https://raw.githubusercontent.com/thomasbisignani/docker-alias-functions/master/.zshrc >> ~/.zshrc && source ~/.zshrc
+
+##### Install for Bash
+    $ curl -fsSL https://raw.githubusercontent.com/thomasbisignani/docker-alias-functions/master/.zshrc >> ~/.bashrc && source ~/.bashrc
+
 #### Docker aliases
 | Alias         | Command                     |
 |:------------- |:----------------------------|
