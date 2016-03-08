@@ -41,10 +41,10 @@ then
 				;;
 			last)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -l -q)
-		    	;;
+				;;
 			*)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $1
-		    	;;
+				;;
 	    esac
 	}
 fi
