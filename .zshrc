@@ -3,16 +3,16 @@
 # ----------------------
 if (which docker > /dev/null)
 then
-	# Docker standard aliases
+	# Docker standard
 	alias dps='docker ps'
 	alias dpsa='docker ps -a'
 	alias dpsl='docker ps -l -q'
 	alias di='docker images'
 
-	# Create a new Bash session (docker-bash <id>)
+	# Create a new Bash session (docker-bash <containerId>)
 	function docker-bash() {
 		if [[ -z "$@" ]]; then
-			 echo >&2 "You must supply an argument : <id>"
+			 echo >&2 "You must supply an argument : <containerId>"
 		else
 			docker exec -it $1 bash
 	    fi
@@ -41,11 +41,20 @@ then
 				;;
 			last)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -l -q)
-				;;
+		    	;;
 			*)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $1
-				;;
+		    	;;
 	    esac
+	}
+
+	# Stop and remove a container
+	function docker-destroy() {
+		if [[ -z "$@" ]]; then
+			 echo >&2 "You must supply an argument : <containerId>"
+		else
+			docker stop $1 && docker rm $1
+	    fi
 	}
 fi
 
