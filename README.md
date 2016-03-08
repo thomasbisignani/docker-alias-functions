@@ -22,8 +22,8 @@ Docker aliases and functions.
 #### Docker functions
 | Alias         | Options                     | Informations                |
 |:------------- |:----------------------------|:----------------------------|
-| docker-ip     | docker-ip <containerId>             | Show the IP Address of a container id. |
+| docker-ip     | docker-ip `containerId`             | Show the IP Address of a container id. |
 |               | docker-ip last             | Show the IP Address of the last created container. |
 |               | docker-ip all              | Show the IP Address of the last created container. |
 |               | docker-ip help             | Display help. |
-| docker-bash   | docker-bash <containerId>           | Create a new Bash session |
+| docker-bash   | docker-bash `containerId`           | Create a new Bash session |
