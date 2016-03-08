@@ -9,7 +9,7 @@ then
 	alias dpsl='docker ps -l -q'
 	alias di='docker images'
 
-	# Show ID, IP Addresses and images of containers running
+	# Show IDs, IPs Addresses and images of containers running
  	function docker-ls() {
 		docker ps | while read line; do
 			if [[ $line == *"CONTAINER ID"* ]]; then
