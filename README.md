@@ -28,13 +28,13 @@ Docker aliases and functions.
 | dcrm          | docker-compose rm           |
 
 #### Docker functions
-| Alias               | Options                             | Informations                                          |
-|:------------------- |:------------------------------------|:------------------------------------------------------|
-| docker-ls           |                                     | Show IDs, IPs Addresses and images of containers running. |
-| docker-ip           | docker-ip `containerId`             | Show the IP Address of a container id. |
-|                     | docker-ip last                      | Show the IP Address of the last created container. |
-|                     | docker-ip all                       | Show all IP Addresses of all containers running. (docker-ls) |
-|                     | docker-ip help                      | Display help. |
-| docker-bash         | docker-bash `containerId`           | Create a new Bash session. |
-| docker-destroy      | docker-destroy `containerId`        | Stop and remove a container or more (docker-destroy `containerId1` `containerId2` ...) |
-|                     | docker-destroy all                  | Stop and remove all containers. |
+| Alias               | Options                                  | Informations                                      |
+|:------------------- |:-----------------------------------------|:------------------------------------------------- |
+| docker-ls           |                                          | Show IDs, IPs Addresses and images of containers running. |
+| docker-ip           | docker-ip `containerId`                  | Show the IP Address of a container id. |
+|                     | docker-ip last                           | Show the IP Address of the last created container. |
+|                     | docker-ip all                            | Show all IP Addresses of all containers running. (docker-ls) |
+|                     | docker-ip help                           | Display help. |
+| docker-bash         | docker-bash `containerId`                | Create a new Bash session. |
+| docker-destroy      | docker-destroy all                       | Stop and remove all containers. |
+|                     | docker-destroy `containerId`             | Stop and remove a container or more (docker-destroy `containerId1` `containerId2` ...) |
