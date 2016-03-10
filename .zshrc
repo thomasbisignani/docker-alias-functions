@@ -69,7 +69,7 @@ fi
 if (which docker-compose exit > /dev/null)
 then
 	alias dcb='docker-compose build'
-	alias dcup='docker-compose up'
+	alias dcup='docker-compose up -d'
 	alias dcstop='docker-compose stop'
 	alias dcrestart='docker-compose restart'
 	alias dcps='docker-compose ps'

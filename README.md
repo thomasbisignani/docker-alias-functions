@@ -21,11 +21,11 @@ Docker aliases and functions.
 | Alias         | Command                     |
 |:------------- |:----------------------------|
 | dcb           | docker-compose build        |
-| dcup          | docker-compose up           |
+| dcup          | docker-compose up -d        |
 | dcstop        | docker-compose stop         |
 | dcrestart     | docker-compose restart      |
-| dcps          | docker-compose ps          |
-| dcrm          | docker-compose rm          |
+| dcps          | docker-compose ps           |
+| dcrm          | docker-compose rm           |
 
 #### Docker functions
 | Alias         | Options                     | Informations                |
