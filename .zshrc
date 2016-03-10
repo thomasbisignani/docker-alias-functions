@@ -45,7 +45,7 @@ then
 				docker-ls
 				;;
 			last)
-				docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -l -q)
+				docker inspect -f {{.NetworkSettings.IPAddress}} $(docker ps -lq)
 		    	;;
 			*)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $1
@@ -56,9 +56,11 @@ then
 	# Stop and remove a container
 	function docker-destroy() {
 		if [[ -z "$@" ]]; then
-			 echo >&2 "You must supply an argument : <containerId>"
+			 echo >&2 "You must supply an argument : <containerId> or all"
+	    elif [[ $@ == "all" ]]; then
+			docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 		else
-			docker stop $1 && docker rm $1
+			docker stop $@ && docker rm $@
 	    fi
 	}
 fi
