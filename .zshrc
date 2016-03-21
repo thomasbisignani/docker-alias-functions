@@ -50,7 +50,7 @@ then
 			*)
 				docker inspect -f {{.NetworkSettings.IPAddress}} $1
 		    	;;
-	    esac
+		esac
 	}
 
 	# Stop and remove a container
@@ -61,7 +61,7 @@ then
 			docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 		else
 			docker stop $@ && docker rm $@
-	    fi
+		fi
 	}
 fi
 
