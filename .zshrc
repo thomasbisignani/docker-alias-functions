@@ -57,7 +57,7 @@ then
 	function docker-destroy() {
 		if [[ -z "$@" ]]; then
 			 echo >&2 "You must supply an argument : <containerId> or all"
-	    elif [[ $@ == "all" ]]; then
+		elif [[ $@ == "all" ]]; then
 			docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 		else
 			docker stop $@ && docker rm $@
